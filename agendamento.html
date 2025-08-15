@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .whatsapp-container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        #agendarBtn {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #agendarBtn:hover {
+            background-color: #128c7e;
+        }
+        #mensagemArea {
+            width: 100%;
+            height: 100px;
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="whatsapp-container">
+    <h1>Agende seu horário!</h1>
+    <textarea id="mensagemArea" placeholder="Digite aqui sua mensagem para agendamento..."></textarea>
+    <br><br>
+    <button id="agendarBtn">Enviar via WhatsApp</button>
+</div>
+
+<script>
+    document.getElementById('agendarBtn').addEventListener('click', function() {
+        // Substitua '5511999999999' pelo seu número de telefone com o código do país
+        const numeroWhatsApp = '46999338914'; 
+
+        // Pega o texto da área de texto
+        const mensagemDigitada = document.getElementById('mensagemArea').value;
+
+        // Monta a mensagem final para o WhatsApp. 
+        // O `encodeURIComponent` é importante para formatar a mensagem corretamente para a URL.
+        const mensagemFinal = encodeURIComponent(mensagemDigitada || 'Olá, gostaria de agendar um horário.');
+
+        // Cria o link para o WhatsApp
+        const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensagemFinal}`;
+
+        // Abre uma nova aba com o link do WhatsApp
+        window.open(urlWhatsApp, '_blank');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* Aqui está todo o código CSS que estava dentro da tag <style> no seu HTML */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background: #EEAECA;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+.hero {
+    background: url('https://via.placeholder.com/1500x800.png?text=Imagem+do+seu+salao') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 10rem 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* O estilo para o botão "Agende seu horário!" */
+.button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Adicionado para remover o sublinhado do link */
+    display: inline-block; /* Adicionado para que o padding e outras propriedades funcionem */
+}
+
+.button:hover {
+    background-color: #e3529d;
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+#servicos div {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    vertical-align: top;
+}
+
+#servicos h3 {
+    color: #ff69b4;
+}
+
+#servicos ul {
+    list-style: none;
+    padding: 0;
+}
+
+#galeria img {
+    width: 30%;
+    margin: 1%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#contato p {
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff69b4; /* Cor de fundo verde */
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
